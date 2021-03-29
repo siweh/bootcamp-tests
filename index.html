@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <script>
+      mocha.setup({
+        ui: 'bdd',
+        //asyncOnly: true,
+        bail: true,
+        checkLeaks: true,
+        //forbidOnly: true,
+        // forbidPending: true,
+        //global: ['MyLib'],
+        retries: 3,
+        slow: '100',
+        timeout: '2000',
+      });
+      //ensure the assert function is available
+      var assert = chai.assert;
+    </script>
+    <!-- the function to be tested -->
+    <script src="./src/greet.js" charset="utf-8"></script>
+    <script src="./src/isFromBellville.js"></script>
+    <script src="./src/regCheck.js"></script>
+
+    <!-- followed by the tests -->
+    <script src="./test/greet.test.js" charset="utf-8"></script>
+    <script src="./test/isFromBellville.test.js"></script>
+    <script src="./test/regCheck.test.js"></script>
+    <script>
+      //   configure and run mocha
+      mocha.checkLeaks();
+      mocha.run();
+    </script>
+  </body>
+</html>
