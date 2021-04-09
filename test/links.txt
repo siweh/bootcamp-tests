@@ -1,0 +1,6 @@
+greet()  --> https://output.jsbin.com/cabiput/
+isFromBellville() --> https://output.jsbin.com/vitevuk/
+regCheck()  ---> https://output.jsbin.com/xavejox/
+transportFee() ---> https://output.jsbin.com/vexecik/
+isWeekday() ---> https://output.jsbin.com/covigic/
+countRegNumber() ---> https://output.jsbin.com/gesozu/
